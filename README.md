@@ -1,106 +1,50 @@
- 🌌 Proyecto Salto Cuántico
+# Universos-Paralelos
 
-🚀 Simulación interactiva de universos paralelos | Física especulativa + Desarrollo Web
+Experimento visual con cinco nodos que representan universos ficticios.
 
----
+## Ejecutar
 
- 🧠 Concepto
+Requiere Node.js 22 o superior. No hay dependencias de paquetes.
 
-**Proyecto Salto Cuántico** es una aplicación web interactiva que explora la teoría de universos paralelos y la posibilidad de saltos entre realidades.
+```sh
+git clone https://github.com/romangon10/Universos-Paralelos.git
+cd Universos-Paralelos
+npm start
+```
 
-Inspirado en conceptos de física cuántica, multiverso y simulación, este proyecto busca representar visualmente cómo diferentes líneas de realidad podrían coexistir e interactuar.
+Abrí `http://127.0.0.1:3000`. Para usar otro puerto, configurá `PORT`. Serví la página por HTTP; los proyectos con módulos ES no funcionan abriendo el HTML con `file://`.
 
----
+## Funcionalidad implementada
 
- 🌐 ¿Qué hace esta aplicación?
+- Un único ciclo de animación, sin intervalos superpuestos.
+- Transiciones sin elegir dos veces el mismo nodo ni bucles aleatorios ilimitados.
+- Botón bloqueado durante la transición y resultado textual accesible.
+- Pausa de la animación en pestañas ocultas y modo de movimiento reducido.
 
-La aplicación simula:
+## Estructura
 
-* 🌌 Múltiples universos coexistiendo en paralelo
-* ⚡ Eventos que generan bifurcaciones de realidad
-* 🔀 “Saltos cuánticos” entre distintas líneas temporales
-* 🧬 Cambios en variables que afectan el resultado de cada universo
-* 🖥️ Visualización interactiva tipo simulador
+- `index.html`: contenido y controles.
+- `style.css`: estilos y adaptación de pantalla.
+- `script.js`: interacción con el navegador.
+- `tools/serve.mjs`: servidor local con lista explícita de archivos públicos.
+- `tools/build.mjs`: copia de los archivos públicos a `dist/`.
+- `test/`: verificaciones automatizadas.
 
----
+## Verificación y publicación
 
-💻 Características principales
+```sh
+npm test
+npm run build
+```
 
-* 🎮 Interfaz interactiva y dinámica
-* 📊 Visualización de líneas temporales
-* ⚡ Animaciones que representan cambios de estado
-* 🔮 Simulación de decisiones y sus consecuencias
-* 🌐 Experiencia inmersiva estilo sci-fi
+El resultado `dist/` puede alojarse en un servicio estático. El build no publica la página por sí mismo. Las pruebas comprueban referencias locales y sintaxis; los proyectos con lógica de simulación incluyen pruebas de esa lógica. No se ha realizado verificación visual automatizada en un navegador.
 
----
+## Alcance
 
- 🛠️ Tecnologías
+Frontend de portfolio. No hay backend, base de datos, autenticación ni recolección de datos. Los controles cambian únicamente el estado temporal de la página. Las mejoras futuras deben acompañarse de sus propias pruebas y documentación.
 
-🔹 Desarrollo
+## Autor
 
-* HTML, CSS, JavaScript
-* React
+[Román González](https://github.com/romangon10)
 
- 🔹 Lógica
-
-* Simulación de estados
-* Manejo de eventos dinámicos
-* Estructuras de datos para universos paralelos
-
- 🔹 Testing QA
-
-* Testing funcional
-* Casos de prueba sobre simulaciones
-* Validación de comportamiento en distintos escenarios
-
----
-
- 🧪 Enfoque QA
-
-Este proyecto no solo es visual, también se testea:
-
-* ✔️ Correcta generación de universos
-* ✔️ Coherencia en los “saltos cuánticos”
-* ✔️ Estabilidad de la simulación
-* ✔️ Manejo de errores en eventos inesperados
-
----
-
- 🎯 Objetivo
-
-Crear una herramienta visual que combine:
-
-* Ciencia teórica
-* Simulación interactiva
-* Desarrollo Full Stack
-* Buenas prácticas de testing
-
----
-
- 🧬 Inspiración
-
-* Teoría del multiverso
-* Mecánica cuántica
-* Simulación de realidades
-* Ciencia ficción
-
----
-
- 📈 Roadmap
-
-* [ ] Integrar IA para decisiones de universos
-* [ ] Agregar visualización 3D
-* [ ] Implementar múltiples variables complejas
-* [ ] Sistema de guardado de universos
-* [ ] Deploy online
-
----
-
- 📫 Contacto
-
-📧 Email: gonzalezromannicolas@gmail.com
-
-
----
-
-⭐ Proyecto Salto Cuántico — Explorando lo imposible a través del código
+MathJax se carga desde jsDelivr para notación decorativa. El relato y sus ecuaciones no constituyen un modelo físico validado.

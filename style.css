@@ -105,3 +105,6 @@ footer {
   background-color: #071921cc;
   box-shadow: inset 0 1px 4px #000000bb;
 }
+
+
+main{width:100%}section{margin-bottom:32px;scroll-margin-top:120px}p{line-height:1.8;margin-bottom:16px}canvas{max-width:100%;height:auto}ol{padding-left:24px}.disclaimer{padding:18px;border-left:3px solid #90d8e2;background:#072a35}#jump-status{font-size:14px;min-height:3em}button:disabled{opacity:.5;cursor:wait}:focus-visible{outline:3px solid white;outline-offset:5px}@media(max-width:720px){header{position:static;display:block;padding:20px}header h1{font-size:1.4rem}nav{display:flex;flex-wrap:wrap;gap:15px;margin-top:20px}nav a{margin:0}main{margin:25px auto}ol li{overflow-wrap:anywhere}h2{font-size:1.2rem}}
